@@ -1,5 +1,5 @@
 {
-  "name": "marked-mermaid",
+  "name": "@maddyguthridge/marked-mermaid",
   "version": "0.1.0",
   "description": "Yet another Mermaid renderer extension for Marked",
   "main": "./lib/index.esm.js",

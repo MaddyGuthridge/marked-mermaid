@@ -39,9 +39,14 @@ Additional notes:
 
 ## Usage
 
+```sh
+npm i @maddyguthridge/marked-mermaid
+```
+
 ```js
-import {Marked} from "marked";
-import markedMermaid from "@MaddyGuthridge/marked-mermaid";
+import { Marked } from 'marked';
+import mermaid from 'mermaid';
+import markedMermaid from '@maddyguthridge/marked-mermaid';
 
 const marked = new Marked(markedMermaid());
 
@@ -54,6 +59,6 @@ const diagram = [
 ].join('\n');
 
 marked.parse(diagram);
-// Mermaid will render it as soon as it is inserted into the DOM (or as soon as
-// the page loads in the browser)
+// Mermaid will all documents as soon as it is instructed to do so:
+void mermaid.run();
 ```
