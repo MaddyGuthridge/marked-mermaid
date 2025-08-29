@@ -2,6 +2,20 @@
 
 A simple Marked extension to render mermaid diagrams.
 
+````md
+# Example document
+
+```mermaid
+sequenceDiagram
+  User->>Marked: Request document containing mermaid
+  Marked-->>User: Generates HTML which Mermaid will convert into a diagram
+```
+````
+<!--
+Quadruple backticks for outer code block
+https://stackoverflow.com/a/25943045/6335363
+-->
+
 Heavily inspired by:
 
 * [marked-mermaid](https://github.com/MichielDeMey/marked-mermaid)
@@ -28,8 +42,8 @@ const marked = new Marked(markedMermaid());
 const diagram = [
   '```mermaid',
   'sequenceDiagram',
-  '  User->>Minifolio: Request document containing mermaid',
-  '  Minifolio-->>User: Uses Marked and MermaidJS to render the document',
+  '  User->>Marked: Request document containing mermaid',
+  '  Marked-->>User: Generates HTML which Mermaid will convert into a diagram',
   '```'
 ].join('\n');
 

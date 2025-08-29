@@ -2,13 +2,12 @@
 import type { MarkedExtension } from 'marked';
 import mermaid from 'mermaid';
 
+// Init mermaid on import
 mermaid.initialize({
   startOnLoad: false,
 });
 
 export default function markedMermaid(): MarkedExtension {
-  // extension code here
-
   return {
     renderer: {
       code: (code) => {
