@@ -3,9 +3,7 @@ import type { MarkedExtension } from 'marked';
 import mermaid from 'mermaid';
 
 // Init mermaid on import
-mermaid.initialize({
-  startOnLoad: false,
-});
+mermaid.initialize({});
 
 export default function markedMermaid(): MarkedExtension {
   return {
