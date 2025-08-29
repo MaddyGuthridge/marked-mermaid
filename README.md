@@ -1,46 +1,39 @@
-<!-- You may also delete any comments you don't need anymore. -->
+# @MaddyGuthridge/marked-mermaid
 
-# TODO:
+A simple Marked extension to render mermaid diagrams.
 
-- [ ] Replace all `marked-extension-template` with your extension npm name
-- [ ] Replace all `markedExtensionTemplate` with your extension global name
-- [ ] Update description in `/README.md`
-- [ ] Update usage in `/README.md`
-- [ ] Update options in `/README.md`
-- [ ] Write extension in `/src/index.ts`
-- [ ] Write tests in `/spec/index.test.js`
-- [ ] Write typescript tests in `/spec/index.test-types.ts`
-- [ ] Uncomment release in `/.github/workflows/main.yml`
+Heavily inspired by:
 
-<!-- Delete this line and above -->
+* [marked-mermaid](https://github.com/MichielDeMey/marked-mermaid)
+* [dbolack-ab/marked-mermaidjs](https://github.com/dbolack-ab/marked-mermaidjs)
 
-# marked-extension-template
-<!-- Description -->
+But with up-to-date dependencies (as of August 2025).
 
-# Usage
-<!-- Show most examples of how to use this extension -->
+* Mermaid 11
+* Marked 16
+
+Additional notes:
+
+* The diagram will only be rendered in the client, since the process for
+  generating it server-side is [horrific](https://github.com/mermaid-js/mermaid/issues/3650)
+
+## Usage
 
 ```js
 import {Marked} from "marked";
-import markedExtensionTemplate from "marked-extension-template";
+import markedMermaid from "@MaddyGuthridge/marked-mermaid";
 
-// or UMD script
-// <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
-// <script src="https://cdn.jsdelivr.net/npm/marked-extension-template/lib/index.umd.js"></script>
-// const Marked = marked.Marked;
+const marked = new Marked(markedMermaid());
 
-const marked = new Marked();
+const diagram = [
+  '```mermaid',
+  'sequenceDiagram',
+  '  User->>Minifolio: Request document containing mermaid',
+  '  Minifolio-->>User: Uses Marked and MermaidJS to render the document',
+  '```'
+].join('\n');
 
-const options = {
-	// default options
-};
-
-marked.use(markedExtensionTemplate(options));
-
-marked.parse("example markdown");
-// <p>example html</p>
+marked.parse(diagram);
+// Mermaid will render it as soon as it is inserted into the DOM (or as soon as
+// the page loads in the browser)
 ```
-
-## `options`
-
-<!-- If there are no options you can delete this section -->

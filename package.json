@@ -1,7 +1,7 @@
 {
-  "name": "marked-extension-template",
-  "version": "0.0.0",
-  "description": "marked extension template",
+  "name": "marked-mermaid",
+  "version": "0.0.1",
+  "description": "Yet another Mermaid renderer extension for Marked",
   "main": "./lib/index.esm.js",
   "module": "./lib/index.esm.js",
   "browser": "./lib/index.umd.js",
@@ -35,32 +35,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/markedjs/marked-extension-template.git"
+    "url": "git+https://github.com/MaddyGuthridge/marked-mermaid.git"
   },
-  "author": "Tony Brix <Tony@Brix.ninja> (https://Tony.Brix.ninja)",
+  "author": "Maddy Guthridge <hello@maddyguthridge.com> (https://maddyguthridge.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/markedjs/marked-extension-template/issues"
+    "url": "https://github.com/MaddyGuthridge/marked-mermaid/issues"
   },
-  "homepage": "https://github.com/markedjs/marked-extension-template#readme",
+  "homepage": "https://github.com/MaddyGuthridge/marked-mermaid#readme",
   "peerDependencies": {
-    "marked": ">=16 <17"
+    "marked": ">=16 <17",
+    "mermaid": ">=11 <12"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
     "@markedjs/eslint-config": "^1.0.13",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/commit-analyzer": "^13.0.1",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^11.0.4",
-    "@semantic-release/npm": "^12.0.2",
-    "@semantic-release/release-notes-generator": "^14.0.3",
     "dts-bundle-generator": "^9.5.1",
     "esbuild": "^0.25.9",
     "esbuild-plugin-umd-wrapper": "^3.0.0",
     "eslint": "^9.34.0",
     "marked": "^16.2.0",
-    "semantic-release": "^24.2.7",
+    "mermaid": "^11.10.1",
     "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@types/node": "^24.3.0"
   }
 }

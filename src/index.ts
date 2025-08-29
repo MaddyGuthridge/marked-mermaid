@@ -1,25 +1,25 @@
 // node:coverage ignore next
 import type { MarkedExtension } from 'marked';
+import mermaid from 'mermaid';
 
-export default function(options = {}): MarkedExtension {
+mermaid.initialize({
+  startOnLoad: false,
+});
+
+export default function markedMermaid(): MarkedExtension {
   // extension code here
 
   return {
-    tokenizer: {
-      paragraph(src) {
-        if (src !== 'example markdown') {
+    renderer: {
+      code: (code) => {
+        // Use default render for other languages
+        if (code.lang !== 'mermaid') {
           return false;
         }
 
-        const text = 'example html';
-
-        return {
-          type: 'paragraph',
-          raw: src,
-          text,
-          tokens: this.lexer.inline(text),
-        };
-      },
-    },
+        // Use Mermaid to render the diagram
+        return `<pre class="mermaid">${code.text}</pre>`
+      }
+    }
   };
 }

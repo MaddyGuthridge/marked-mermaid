@@ -3,6 +3,6 @@ import '../lib/index.umd.js';
 
 describe('marked-extension-template umd', () => {
   test('test umd global', (t) => {
-    t.assert.equal(typeof markedExtensionTemplate, 'function');
+    t.assert.equal(typeof markedMermaid, 'function');
   });
 });

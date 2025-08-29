@@ -1,13 +1,7 @@
 import { Marked } from 'marked';
-import markedExtensionTemplate from 'marked-extension-template';
+import markedMermaid from '../src/index.ts';
 
-const marked = new Marked();
-
-const options = {
-  // default options
-};
-
-marked.use(markedExtensionTemplate(options));
+const marked = new Marked(markedMermaid());
 
 const html: string = marked.parse('example markdown', { async: false });
 console.log(html);
