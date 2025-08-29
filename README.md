@@ -28,8 +28,14 @@ But with up-to-date dependencies (as of August 2025).
 
 Additional notes:
 
-* The diagram will only be rendered in the client, since the process for
-  generating it server-side is [horrific](https://github.com/mermaid-js/mermaid/issues/3650)
+* The diagram will only be rendered in a browser, since the process for
+  generating it server-side is [horrific](https://github.com/mermaid-js/mermaid/issues/3650).
+  As such, this extension won't work nicely with the `marked` CLI.
+* You will need to call `mermaid.run()` manually once the page loads, and again
+  whenever your document changes.
+* This doesn't attempt to do any fancy memoization, which makes the
+  implementation much simpler than alternatives. It's still fast enough for
+  real-time editing.
 
 ## Usage
 
