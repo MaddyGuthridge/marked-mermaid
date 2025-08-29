@@ -17,8 +17,8 @@ export default function markedMermaid(): MarkedExtension {
         }
 
         // Use Mermaid to render the diagram
-        return `<pre class="mermaid">${code.text}</pre>`
-      }
-    }
+        return `<pre class="mermaid">${code.text}</pre>`;
+      },
+    },
   };
 }

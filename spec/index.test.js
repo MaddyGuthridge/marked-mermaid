@@ -9,7 +9,7 @@ describe('marked-extension-template', () => {
       'sequenceDiagram',
       '  User->>Minifolio: Request document containing mermaid',
       '  Minifolio-->>User: Uses Marked and MermaidJS to render the document',
-      '```'
+      '```',
     ].join('\n');
     const marked = new Marked(markedMermaid());
     const unmarked = new Marked();
@@ -20,7 +20,7 @@ describe('marked-extension-template', () => {
     const js = [
       '```js',
       'console.log(typeof NaN);  // Number',
-      '```'
+      '```',
     ].join('\n');
     const marked = new Marked(markedMermaid());
     const unmarked = new Marked();
