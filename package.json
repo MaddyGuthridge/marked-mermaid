@@ -1,6 +1,6 @@
 {
   "name": "@maddyguthridge/marked-mermaid",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Yet another Mermaid renderer extension for Marked",
   "main": "./lib/index.esm.js",
   "module": "./lib/index.esm.js",
@@ -44,19 +44,19 @@
   },
   "homepage": "https://github.com/MaddyGuthridge/marked-mermaid#readme",
   "peerDependencies": {
-    "marked": ">=16 <17",
+    "marked": ">=16 <18",
     "mermaid": ">=11 <12"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
     "@markedjs/eslint-config": "^1.0.13",
+    "@types/node": "^24.3.0",
     "dts-bundle-generator": "^9.5.1",
     "esbuild": "^0.25.9",
     "esbuild-plugin-umd-wrapper": "^3.0.0",
     "eslint": "^9.34.0",
-    "marked": "^16.2.1",
+    "marked": "^17.0.0",
     "mermaid": "^11.10.1",
-    "typescript": "^5.9.2",
-    "@types/node": "^24.3.0"
+    "typescript": "^5.9.2"
   }
 }
