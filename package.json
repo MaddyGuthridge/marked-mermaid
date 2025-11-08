@@ -52,7 +52,7 @@
     "@markedjs/eslint-config": "^1.0.13",
     "@types/node": "^24.3.0",
     "dts-bundle-generator": "^9.5.1",
-    "esbuild": "^0.25.9",
+    "esbuild": "^0.25.12",
     "esbuild-plugin-umd-wrapper": "^3.0.0",
     "eslint": "^9.34.0",
     "marked": "^17.0.0",
