@@ -11,10 +11,12 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+      - run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+        id: nvm
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v4
         with:
-          node-version: '24.x'
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
           registry-url: 'https://registry.npmjs.com'
       - run: npm ci
       - run: npm run build
