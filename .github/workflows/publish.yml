@@ -10,11 +10,11 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
         id: nvm
       # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
           registry-url: 'https://registry.npmjs.com'
