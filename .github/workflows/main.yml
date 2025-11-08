@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v5
-      - run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+      - run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Install Node
         uses: actions/setup-node@v6
@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v5
-      - run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+      - run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Install Node
         uses: actions/setup-node@v6
@@ -52,7 +52,7 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v5
-      - run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+      - run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Install Node
         uses: actions/setup-node@v6
@@ -68,7 +68,7 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v5
-      - run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+      - run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Install Node
         uses: actions/setup-node@v6
@@ -84,7 +84,7 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v5
-      - run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+      - run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Install Node
         uses: actions/setup-node@v6
