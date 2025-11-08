@@ -21,10 +21,10 @@ Heavily inspired by:
 * [marked-mermaid](https://github.com/MichielDeMey/marked-mermaid)
 * [dbolack-ab/marked-mermaidjs](https://github.com/dbolack-ab/marked-mermaidjs)
 
-But with up-to-date dependencies (as of August 2025).
+But with up-to-date dependencies (as of November 2025).
 
 * Mermaid 11
-* Marked 16
+* Marked 16-17
 
 Additional notes:
 
