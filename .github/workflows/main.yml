@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+env:
+  NODE_VERSION: "22.x"
 
 permissions:
   contents: read
@@ -11,6 +13,9 @@ permissions:
 jobs:
 
   Test:
+    strategy:
+      matrix:
+        marked-version: ['16', '17']
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -18,10 +23,11 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: '*'
-          check-latest: true
+          node-version: ${{ vars.NODE_VERSION }}
       - name: Install Dependencies
         run: npm ci
+      - name: Test with marked version
+        run: npm i -D ${{ matrix.marked-version }}
       - name: Run Tests 👩🏽‍💻
         run: npm run test
 
@@ -33,7 +39,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: 'lts/*'
+          node-version: ${{ vars.NODE_VERSION }}
       - name: Install Dependencies
         run: npm ci
       - name: Run Tests 👩🏽‍💻
@@ -47,7 +53,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: 'lts/*'
+          node-version: ${{ vars.NODE_VERSION }}
       - name: Install Dependencies
         run: npm ci
       - name: Run Tests 👩🏽‍💻
@@ -61,7 +67,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: 'lts/*'
+          node-version: ${{ vars.NODE_VERSION }}
       - name: Install Dependencies
         run: npm ci
       - name: Lint ✨
@@ -75,7 +81,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: 'lts/*'
+          node-version: ${{ vars.NODE_VERSION }}
       - name: Install Dependencies
         run: npm ci
       - name: Build 🗜️
