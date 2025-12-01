@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Install Node
@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Install Node
@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Install Node
@@ -67,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Install Node
@@ -83,7 +83,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Install Node
