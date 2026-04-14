@@ -24,7 +24,7 @@ Heavily inspired by:
 But with up-to-date dependencies (as of November 2025).
 
 * Mermaid 11
-* Marked 16-17
+* Marked 16-18
 
 Additional notes:
 
@@ -43,6 +43,12 @@ Additional notes:
 npm i @maddyguthridge/marked-mermaid
 ```
 
+Don't forget the peer dependencies:
+
+```sh
+npm i marked mermaid
+```
+
 ```js
 import { Marked } from 'marked';
 import mermaid from 'mermaid';
@@ -59,6 +65,6 @@ const diagram = [
 ].join('\n');
 
 marked.parse(diagram);
-// Mermaid will all documents as soon as it is instructed to do so:
+// Mermaid will render all documents as soon as it is instructed to do so:
 void mermaid.run();
 ```

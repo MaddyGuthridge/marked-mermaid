@@ -11,15 +11,10 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v6
-      - run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
-        id: nvm
-      # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v6
         with:
-          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
-          registry-url: 'https://registry.npmjs.com'
+          node-version-file: ".nvmrc"
+          registry-url: "https://registry.npmjs.com"
       - run: npm ci
       - run: npm run build
       - run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
