@@ -18,6 +18,10 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           registry-url: "https://registry.npmjs.com"
+      - name: Update NPM
+        run: |
+          npm i -g npm@latest
+          npm --version
       - run: npm ci
       - run: npm run build
       - run: npm publish --provenance --access public
