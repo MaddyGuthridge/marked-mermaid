@@ -10,6 +10,14 @@ sequenceDiagram
   User->>Marked: Request document containing mermaid
   Marked-->>User: Generates HTML which Mermaid will convert into a diagram
 ```
+
+Or, using an alternative (HTML-like) syntax:
+
+<pre class="mermaid">
+  sequenceDiagram
+    User->>Marked: Request document containing mermaid
+    Marked-->>User: Generates HTML which Mermaid will convert into a diagram
+</pre>
 ````
 <!--
 Quadruple backticks for outer code block
@@ -68,3 +76,8 @@ marked.parse(diagram);
 // Mermaid will render all documents as soon as it is instructed to do so:
 void mermaid.run();
 ```
+
+## Options
+
+* `enableCodeBlockRender`: whether to convert markdown Mermaid code blocks into
+  Mermaid diagrams. Defaults to `true`.
