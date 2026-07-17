@@ -55,7 +55,7 @@
     "esbuild": "^0.28.1",
     "esbuild-plugin-umd-wrapper": "^3.0.0",
     "eslint": "^10.6.0",
-    "marked": "^18.0.5",
+    "marked": "^18.0.6",
     "mermaid": "^11.16.0",
     "typescript": "^6.0.3"
   },
