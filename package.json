@@ -57,7 +57,7 @@
     "eslint": "^10.6.0",
     "marked": "^18.0.6",
     "mermaid": "^11.16.0",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.2"
   },
   "allowScripts": {
     "esbuild@0.28.1": true
