@@ -48,7 +48,7 @@
     "mermaid": ">=11 <12"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "^0.18.4",
+    "@arethetypeswrong/cli": "^0.18.5",
     "@markedjs/eslint-config": "^1.0.14",
     "@types/node": "^25.9.5",
     "dts-bundle-generator": "^9.5.1",
