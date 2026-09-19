@@ -45,7 +45,7 @@
   "homepage": "https://github.com/MaddyGuthridge/marked-mermaid#readme",
   "peerDependencies": {
     "marked": ">=16 <19",
-    "mermaid": ">=11 <12"
+    "mermaid": ">=11 <13"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
