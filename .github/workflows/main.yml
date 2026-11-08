@@ -28,7 +28,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm ci
       - name: Test with marked version
-        run: pnpm i -D ${{ matrix.marked-version }}
+        run: pnpm i -D -w ${{ matrix.marked-version }}
       - name: Run Tests 👩🏽‍💻
         run: pnpm test
 
