@@ -12,24 +12,28 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "latest",
+    "@storybook/addon-a11y": "^10.6.6",
+    "@storybook/addon-docs": "^10.6.6",
+    "@storybook/addon-svelte-csf": "latest",
+    "@storybook/addon-vitest": "^10.6.6",
+    "@storybook/svelte-vite": "^10.6.6",
     "@sveltejs/vite-plugin-svelte": "^7.3.1",
     "@tsconfig/svelte": "^5.0.8",
     "@types/node": "^24.19.2",
+    "@vitest/browser-playwright": "latest",
+    "@vitest/coverage-v8": "latest",
+    "eslint-plugin-storybook": "^10.6.6",
+    "playwright": "latest",
+    "storybook": "^10.6.6",
     "svelte": "^5.57.2",
     "svelte-check": "^4.7.7",
     "typescript": "~6.0.3",
     "vite": "^8.3.5",
-    "storybook": "^10.6.6",
-    "@storybook/svelte-vite": "^10.6.6",
-    "@storybook/addon-svelte-csf": "latest",
-    "@chromatic-com/storybook": "latest",
-    "@storybook/addon-vitest": "^10.6.6",
-    "@storybook/addon-a11y": "^10.6.6",
-    "@storybook/addon-docs": "^10.6.6",
-    "eslint-plugin-storybook": "^10.6.6",
-    "vitest": "latest",
-    "@vitest/browser-playwright": "latest",
-    "@vitest/coverage-v8": "latest",
-    "playwright": "latest"
+    "vitest": "latest"
+  },
+  "dependencies": {
+    "@maddyguthridge/marked-mermaid": "workspace:*",
+    "marked": "^18.1.3"
   }
 }
