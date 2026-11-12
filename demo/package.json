@@ -1,0 +1,39 @@
+{
+  "name": "marked-mermaid-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "latest",
+    "@storybook/addon-a11y": "^10.6.6",
+    "@storybook/addon-docs": "^10.6.6",
+    "@storybook/addon-svelte-csf": "latest",
+    "@storybook/addon-vitest": "^10.6.6",
+    "@storybook/svelte-vite": "^10.6.6",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/node": "^24.19.2",
+    "@vitest/browser-playwright": "latest",
+    "@vitest/coverage-v8": "latest",
+    "eslint-plugin-storybook": "^10.6.6",
+    "playwright": "latest",
+    "storybook": "^10.6.6",
+    "svelte": "^5.57.2",
+    "svelte-check": "^4.7.7",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.5",
+    "vitest": "latest"
+  },
+  "dependencies": {
+    "@maddyguthridge/marked-mermaid": "workspace:*",
+    "marked": "^18.1.3"
+  }
+}
