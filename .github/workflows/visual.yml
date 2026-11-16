@@ -32,9 +32,9 @@ jobs:
       - name: Run Tests
         run: pnpm test:visual
         working-directory: demo
-      # - uses: actions/upload-artifact@v5
-      #   if: ${{ !cancelled() }}
-      #   with:
-      #     name: playwright-report
-      #     path: playwright-report/
-      #     retention-days: 30
+      - uses: actions/upload-artifact@v5
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: demo/playwright-report/
+          retention-days: 30
