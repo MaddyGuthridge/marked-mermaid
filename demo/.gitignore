@@ -23,5 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-*storybook.log
-storybook-static
+# Playwright
+test-results/
+playwright-report/

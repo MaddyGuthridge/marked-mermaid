@@ -26,6 +26,14 @@ jobs:
         run: pnpm ci
       - name: Build library
         run: pnpm build
+      - name: Install browsers
+        run: pnpm exec playwright install --with-deps
       - name: Run Tests
         run: pnpm test:visual
         working-directory: demo
+      # - uses: actions/upload-artifact@v5
+      #   if: ${{ !cancelled() }}
+      #   with:
+      #     name: playwright-report
+      #     path: playwright-report/
+      #     retention-days: 30

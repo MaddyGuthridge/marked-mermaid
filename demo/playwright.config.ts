@@ -3,6 +3,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './src',
   fullyParallel: true,
+  reporter: [['html', { open: 'never' }]],
   use: {
     baseURL: 'http://localhost:4173',
     // Fixed viewport prevents responsive layout shifts across machines
