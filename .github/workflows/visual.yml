@@ -1,0 +1,29 @@
+name: "Visual Testing"
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+
+  Visual:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v7.0.1
+      - run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+        id: nvm
+      - uses: pnpm/setup@v3
+        with:
+          version: 12
+          runtime: node@${{ steps.nvm.outputs.NODE_VERSION }}
+          cache: true
+      - name: Install Dependencies
+        run: pnpm ci
+      - name: Run Tests
+        run: pnpm test:visual
+        working-directory: demo
