@@ -8,7 +8,7 @@ sequenceDiagram
     participant mermaid as Mermaid
     participant dom as DOM
 
-	activate u
+    activate u
     u->>+site: Request webpage<br>containing mermaid
     site->>+marked: Renders Markdown<br>document, using<br>mermaid extension
     marked-->>-site: Provides HTML
@@ -28,7 +28,7 @@ Or, using an alternative (HTML-like) syntax:
 
 <pre class="mermaid">
 sequenceDiagram
-  	actor User
+    actor User
     User->>GitHub: Clicks star button
     GitHub-->>User: Repo gets starred, making Maddy happy
 </pre>
