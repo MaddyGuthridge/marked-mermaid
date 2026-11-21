@@ -12,7 +12,7 @@
     "test:visual:update": "playwright test -u"
   },
   "devDependencies": {
-    "@playwright/test": "1.64.0",
+    "@playwright/test": "1.65.1",
     "@sveltejs/vite-plugin-svelte": "^7.3.1",
     "@tsconfig/svelte": "^5.0.9",
     "@types/node": "^24.19.2",
