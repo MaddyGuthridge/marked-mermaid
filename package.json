@@ -54,7 +54,7 @@
     "dts-bundle-generator": "^10.0.0",
     "esbuild": "^0.28.2",
     "esbuild-plugin-umd-wrapper": "^3.0.0",
-    "eslint": "^10.14.0",
+    "eslint": "^10.15.0",
     "marked": "^18.2.1",
     "mermaid": "^12.3.0",
     "typescript": "^6.0.3"
