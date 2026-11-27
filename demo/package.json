@@ -27,6 +27,6 @@
   },
   "dependencies": {
     "@maddyguthridge/marked-mermaid": "workspace:*",
-    "marked": "^18.2.1"
+    "marked": "^18.3.0"
   }
 }
